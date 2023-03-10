@@ -1,0 +1,90 @@
+:root {
+    /*These are the colors*/
+    --color-primary: #BB9457;
+    --color-secondary: #99582A;
+    --color-accent1: #432818;
+    --color-accent2: #f7f7f7;
+    --color-accent3: #d3cdb2;
+    --color-accent4: #3a508e;
+    --color-accent5: #6F1D1B;
+    
+
+    --color-cards-background: #99582a;
+    --color-main-background: #d3cdb2;
+    --color-heading: #3a508e;
+    --color-section-background: #f7f7f7;
+  
+    /*These are the fonts*/
+    --font-heading: Raleway, Verdana, sans-serif;
+    --font-subheading: Raleway, Verdana, sans-serif;
+    --font-subheading2: Raleway, Verdana, sans-serif;
+    --font-paragraph: Raleway, Verdana, sans-serif;
+}
+
+/*apply a natural box layout model to all elements*/
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 5vh;
+    font-weight: 400;
+    color: var(--color-heading);
+    margin-bottom: 1.5vh;
+}
+
+
+header {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: var(--color-cards-background);
+    box-shadow: #888888 0 0 30px 10px;
+}
+
+section {
+    margin: 0.25rem;
+    padding: 0.8rem;
+    background-color: var(--color-accent3);
+    border: 1px solid #bbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-subheading2);
+}
+
+h2 {
+    font-weight: 400;
+    padding-bottom: .25rem;
+}
+
+p {
+    font-weight: 200;
+}
+
+img {
+    width: auto;
+	max-width: 325px;
+    box-shadow: 0 0 30px 5px var(--color-accent2);
+    height: 200px;
+    margin-top: 0.8rem;
+    border-radius: 4px; 
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
