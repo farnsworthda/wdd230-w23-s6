@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--This is the font info-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;800;900&family=Rancho&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!--Reference to the favicon-->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <title>Lakeside Chamber of Commmerce</title>
+    <meta name="description" content="This is a fictious website for the Lakeside Chamber, it will demonstrate my design and coding skills.">
+
+    
+    <!--Style Sheets-->
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- phone-default -->
+    <link href="styles/base.css" rel="stylesheet">
+    
+    <!-- enhance-tablet -->
+    <link href="styles/medium.css" rel="stylesheet">
+    <!-- enhance-desktop -->
+    <link href="styles/large.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!--This is the Header-->
+    <header>
+        <a href="index.html">
+            <img id="logo" src="images/logo-tan200.webp" alt="Lakeside Chamber logo">
+        </a>
+
+        <h1>Lakeside, CA</h1>
+        <p>Chamber of Commerce</p>
+
+     
+        <!--This is the Navagation-->
+       
+        <!--This is the date line-->
+        <div id="today-is">
+            <span class="day">day</span>
+            <span class="date">date</span>
+            <span class="time"></span>
+            
+        </div>
+        
+        <nav>
+            <!--Animated hamburger button-->
+            <div id="container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul id="primary-nav">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="discover.html">Discover</a>
+                </li>
+                <li>
+                    <a href="directory.html">Directory</a>
+                </li>
+                <li>
+                    <a href="join.html">Join</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>  
+                <li>
+                    <a href="https://www.facebook.com/lakeside.chamber">
+                    <span>
+                        <img src="images/facebook.png" alt="fb icon">
+                    </span>Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lakesidechamber/">
+                    <span>
+                        <img src="images/instagram.png" alt="instagram icon"> 
+                    </span>Instagram</a>
+                </li>   
+            </ul>
+        </nav> 
+    </header>
+     
+
+    <!--The content will go here-->
+    <main class="main1">
+        <picture id="hero">
+            <source media="(max-width: 700px)" srcset="images/gone-fishin700.webp">
+            <source media="(max-width: 1108px)" srcset="images/gone-fishin1108.webp">
+            <img src="images/gone-fishin800.webp" alt="large sample image">
+          
+        </picture>
+
+        <section id="event">
+            <h2>Touch-a-Truck</h2>
+            <p class="emoji">🚛</p>
+            <p>Trucks, trailers, tractors, machinery, cool cars and everything in between. For children to get up in and see what it's like on the inside of one of these vehicles. They can talk to the operator of the vehicle for tips and stories and how each different vehicle has different functions and purposes.</p>
+        </section>
+
+        <section id="weather">
+            
+            <h2>Weather*</h2>
+            <figure>
+                <img src="images/sunny.png" alt="sunny" class="emoji">
+                <figcaption class="emoji-caption">Sunny Skys </figcaption>
+            </figure>
+
+            <p><span id="temperature">26
+            </span>℉</p>
+
+            <hr>
+            <p>Wind Speed: <span id="wind-speed"></span> m/h</p>
+            <p>Wind Chill: <span id="wind-chill"></span></p>
+            
+        </section>
+
+        <section id="news">
+            <h2>News Release</h2>
+            <p class="emoji">📰</p>
+            <p>A small group of determined residents rallied to save two dozen jacaranda trees as rumbling bulldozers began grading for the new library.</p>
+        </section>
+
+        <section class="spotlight">
+            <div>
+                <h2>Mary's Donuts</h2>
+                <p class="emoji">🍩</p>
+                <p>Available for Special Events</p>
+                <hr>
+                <p>10101 Main Ave.</p>
+                <p>619·224·5272</p>
+            </div>
+            <div>
+                <h2>Rock & Block</h2>
+                <p class="emoji">🧱</p>
+                <p>Hardscape Supply</p>
+                <hr>
+                <p>13288 Highway 8 Business</p>
+                <p>619·937·3870</p>
+            </div>
+            <div>
+                <h2>Hilliker's</h2>
+                <p class="emoji">🐓</p>
+                <p>Ranch Fresh Eggs</p>
+                <hr>
+                <p>11329 El Nopal</p>
+                <p>619·448·3683</p>
+            </div>
+        </section>
+
+        <section id="join">
+            <h2>Join</h2>
+            <p class="emoji">🤝</p>
+            <p>Thank you for your interest in the Lakeside Chamber of Commerce. As a member you will have full access to the most powerful, successful & influential business in the Lakeside community. We offer a variety of membership packages to fit your needs. </p>
+        </section>
+    
+    </main>
+
+    <!--This is the footer-->
+    <footer>
+        <img class="logo" src="images/logo-tan200.webp" alt="Lakeside Chamber logo">
+        
+        
+        <h3>Lakeside Chamber of Commerce - CA</h3>
+        <div id="cont-info">
+            <p class="address">
+                <a href="https://goo.gl/maps/R4QwPnFjbDWserP97" target="_blank">
+                    <span>📍</span>  
+                </a>
+                 9924 Vine ST., Lakeside, CA 92040
+            </p>
+            <p class="phone"><span>📞</span> 619.561.1031</p>
+            <p class="email"><span>📧</span> info@lakesidechamber.org</p>
+        </div>
+
+        <hr>
+            <p id="copyright"></p>
+            <p>WDD230 Project</p>
+            <p id="update-date"></p>
+
+            <p id="weather-credit">*Weather Data Provided by <span><a href="https://openweathermap.org/">openWeatherMap.org</a></span></p>    
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+
+    <script src="scripts/windchill.js"></script>
+
+</body>
+</html>

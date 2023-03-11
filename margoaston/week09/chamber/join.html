@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+     <!--This is the font info-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;800;900&family=Rancho&family=Sacramento&display=swap" rel="stylesheet">
+
+     <!--Reference to the favicon-->
+     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <title>Join the Chamber</title>
+    <meta name="description" content="This page demonstrates the use of HTML forms.">
+
+    <!--Style Sheets-->
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- phone-default -->
+    <link href="styles/base.css" rel="stylesheet">
+    <!-- enhance-tablet -->
+    <link href="styles/medium.css" rel="stylesheet">
+    <!-- enhance-desktop -->
+    <link href="styles/large.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="images/logo-tan200.webp" alt="Lakeside Chamber logo">
+        </a>
+
+        <h1>Lakeside, CA</h1>
+        <p>Chamber of Commerce</p>
+        
+        <!--This is the Navagation-->
+        <!--This is the date line-->
+        <div id="today-is">
+            <span class="day"></span>
+            <span class="date"></span>
+            <span class="time"></span>
+        </div>
+
+        <nav>
+            <!--Animated hamburger button-->
+            <div id="container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul id="primary-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="discover.html">Discover</a>
+                </li>
+                <li>
+                    <a href="directory.html">Directory</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Join</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>  
+                <li>
+                    <a href="https://www.facebook.com/lakeside.chamber">
+                    <span>
+                        <img src="images/facebook.png" alt="fb icon">
+                    </span>Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lakesidechamber/">
+                    <span>
+                        <img src="images/instagram.png" alt="instagram icon"> 
+                    </span>Instagram</a>
+                </li>   
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="join-main">
+        <h2 class="sub-heading">Join</h2>
+        <h2 class="page-title"> the Lakeside Chamber of Commerce</h2>
+        <div>
+            <table>
+                <caption>(NP = Non-profit Organization)</caption>
+                <thead>    
+                    <tr>
+                        <th colspan="5" >Lakeside Chamber Membership Levels</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th colspan="1">Training</th>
+                        <th colspan="1">Advertising</th>  
+                        <th colspan="1">Event Discounts</th> 
+                        <th colspan="1">Monthly Dues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gold</td>
+                        <td>included</td>
+                        <td>Premium Logo Placement</td>
+                        <td>included</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Silver</td>
+                        <td>included</td>
+                        <td>Banner Ad</td>
+                        <td>50%</td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td>Bronz</td>
+                        <td>fees vary</td>
+                        <td>e-newsletter</td>
+                        <td>10%</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>NP</td>
+                        <td>fees vary</td>
+                        <td>e-newsletter</td>
+                        <td>included</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            
+            </table>
+        </div>
+        <div>
+            
+            <form method="get" action="thankyou.html">
+                
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label class="top" >First Name* <input type="text" name="fname" required></label>
+                    <label class="top">Last Name* <input type="text" name="lname" required></label>
+                    
+                    
+
+                    <label class="top">Cell Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+                    <label class="top" >Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+
+
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>My Business Information</legend>
+                    <label class="top">Business Name* <input type="text" name="business" required></label>
+                    <label class="top">My Position in the Business <input type="text" name="title" pattern="[A-Za-z- ]{7,}" placeholder="Marketing Manager"></label>
+                    <label class="top">Website<input type="url" name="url" placeholder="http//"></label>
+                    <label class="top">Business Description
+                    <textarea name="businessDescription" id="bus-description" rows="4" placeholder="Enter business description here. . ."></textarea></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label class="sbs"><input type="radio" name="memberLevel" value="gold"> Gold </label>
+                    <label class="sbs" ><input type="radio" name="memberLevel" value="silver"> Silver </label>
+                    <label class="sbs" ><input type="radio" name="memberLevel" value="bronz"> Bronz </label>
+                    <label class="sbs" ><input type="radio" name="memberLevel" value="np"> NP (Non-profit) </label>
+                </fieldset>
+
+                <input type="hidden" id="time-now" name="time-now" value="">
+
+                <div>
+                <input type="submit" value = "Join My  Lakeside Chamber" class="submitBtn">
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <!--This is the footer-->
+    <footer>
+        <img class="logo" src="images/logo-tan200.webp" alt="Lakeside Chamber logo">
+        
+        
+        <h3>Lakeside Chamber of Commerce - CA</h3>
+        <div id="cont-info">
+            <p class="address">
+                <a href="https://goo.gl/maps/R4QwPnFjbDWserP97" target="_blank">
+                    <span>📍</span>  
+                </a>
+                 9924 Vine ST., Lakeside, CA 92040
+            </p>
+            <p class="phone"><span>📞</span> 619.561.1031</p>
+            <p class="email"><span>📧</span> info@lakesidechamber.org</p>
+        </div>
+
+        <hr>
+        <p id="copyright"></p>
+        <p>WDD230 Project</p>
+        <p id="update-date"></p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/join.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--This is the font info-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;800;900&family=Rancho&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!--Reference to the favicon-->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <title>Discover</title>
+    <meta name="description" content="This page demonstrates progresive loading.">
+
+    <!--Style Sheets-->
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- phone-default -->
+    <link href="styles/base.css" rel="stylesheet">
+    <!-- enhance-tablet -->
+    <link href="styles/medium.css" rel="stylesheet">
+    <!-- enhance-desktop -->
+    <link href="styles/large.css" rel="stylesheet">
+
+</head>
+<body>
+    <!--This is the Header-->
+    
+    <header>
+        <a href="index.html">
+            <img id="logo" src="images/logo-tan200.webp" alt="Lakeside Chamber logo">
+        </a>
+
+        <h1>Lakeside, CA</h1>
+        <p>Chamber of Commerce</p>
+        
+        <!--This is the Navagation-->
+        <!--This is the date line-->
+        <div id="today-is">
+            <span class="day">day</span>
+            <span class="date">date</span>
+            <span class="time"></span>
+        </div>
+
+        <nav>
+            <!--Animated hamburger button-->
+            <div id="container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul id="primary-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="discover.html" class="active">Discover</a>
+                </li>
+                <li>
+                    <a href="directory.html">Directory</a>
+                </li>
+                <li>
+                    <a href="join.html">Join</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>  
+                <li>
+                    <a href="https://www.facebook.com/lakeside.chamber">
+                    <span>
+                        <img src="images/facebook.png" alt="fb icon">
+                    </span>Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lakesidechamber/">
+                    <span>
+                        <img src="images/instagram.png" alt="instagram icon"> 
+                    </span>Instagram</a>
+                </li>   
+            </ul>
+        </nav>
+    </header>
+
+    <main id="discover-main">
+        <h2 class="sub-heading">Discover Lakeside</h2>
+        <section id="around-town">
+            
+            <h2>Things to see and do in Lakeside:</h2>
+
+            <picture id="discover-img">
+                <img src="images/rectangle2.webp" data-src="images/lake.webp" alt="Lake Jennings, CA">
+            </picture>
+            <h3>The Lakes:</h3> 
+            <p>We have four lakes, El Capitan Lake, where you can fish, boat and jet ski. Lake Jennings has camping and fishing, San Vincente Reservoir has fishing and general boating, no water contact activities, and Lindo Lake has fishing and walking paths. 
+            </p>
+            
+            <picture id="discover-img">
+                <img src="images/rectangle2.webp" data-src="images/golf-1.webp" alt="Lakeside Golf Course and Country Club">
+            </picture>
+            <h3>Golf:</h3> 
+            <p>For the golf enthusiast we have two golf courses. Barona Creek Golf Club and Willowbrook Golf Course.
+            </p>
+
+            <picture id="discover-img">
+                <img src="images/rectangle2.webp" data-src="images/library.webp" alt="Lakeside Library">
+            </picture>
+            <h3>Award Winning Library:</h3> 
+            <p>Our public library system has earned an award as being one of the top ten library systems in the nation. 
+            </p>
+
+            <picture id="discover-img">
+                <img src="images/rectangle2.webp" data-src="images/community-center-1.webp" alt="Lakeside Community Center">
+            </picture>
+            <h3>Community Center:</h3> 
+            <p>Lunch is served daily to our senior friends. Individuals of all ages are invited to participate in a wide variety of classes and workshops.
+            </p>
+
+            <picture id="discover-img">
+                <img src="images/rectangle2.webp" data-src="images/skatepark-1.webp" alt="Lindo Lake Skatepark">
+            </picture>
+            <h3>The Lakeside Skatepark:</h3> 
+            <p>Show off your skills and practice your tricks at our family friendly skatepark. 
+            </p>
+
+            <picture id="discover-img">
+                <img src="images/rectangle2.webp" data-src="images/rodeo.webp" alt="Lakeside Rodeo">
+            </picture>
+            <h3>Lakeside Rodeo Association:</h3> 
+            <p>We host a minimum of 2 sanctioned rodeos per year with numerous concerts and events. 
+            </p>
+        </section>
+
+        <section class="discover-container">
+            <div>
+                <h2>Demographic Data:</h2>
+                <p>⌘</p>
+                <h3>Lakeside is an unincorporated community nestled in the foothills of San Diego county.</h3>
+                <p class="emoji">🏘</p>
+
+                <h3 class="label">Elevation: <span>413'</span></h3>
+                <h3 class="label">Area: <span>7.281 sq/mi</span></h3>
+                <h3 class="label">Population: <span>21,032 (2020)</span></h3>
+
+            </div>
+        </section>
+
+        <!--This section uses local storage-->
+        <!--This is the date line-->
+        
+        <section class="discover-container">
+            <div>
+            <h2>Welcome</h2>
+            <p>⌘</p>
+
+            
+            <h3><span class="label">Number of visits: </span> <span class="visits"></span></h3>
+
+            <h3><span class="label">Days since your last visit: </span><span class="elapsed-days"></span></h3>
+             
+            <h3><span class="label">Timestamp upon load:</span> <span class="today"></span> (in milliseconds)</h3>
+            </div>
+        </section>
+
+            
+    </main>
+
+    <!--This is the footer-->
+    <footer>
+        <img class="logo" src="images/logo-tan200.webp" alt="Lakeside Chamber logo">
+        
+        
+        <h3>Lakeside Chamber of Commerce - CA</h3>
+        <div id="cont-info">
+            <p class="address">
+                <a href="https://goo.gl/maps/R4QwPnFjbDWserP97" target="_blank">
+                    <span>📍</span>  
+                </a>
+                 9924 Vine ST., Lakeside, CA 92040
+            </p><!--This is the footer-->
+            <p class="phone"><span>📞</span> 619.561.1031</p>
+            <p class="email"><span>📧</span> info@lakesidechamber.org</p>
+        </div>
+
+        <hr>
+        <div class="copyright">
+            <p id="copyright"></p>
+            <p>WDD230 Project</p>
+            <p id="update-date"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/lazyload.js"></script>
+    <script src="scripts/visits.js"></script>
+    
+</body>
+</html>

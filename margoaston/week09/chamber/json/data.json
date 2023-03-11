@@ -1,0 +1,76 @@
+{
+    "members" : [
+        {
+            "name" : "Mary's Donuts",
+            "address" : "1010 Main Ave, Lakeside, CA 92040"  ,
+            "phone" : "619 334-5272" ,
+            "website" : "https://marysdonuts.com/",
+            "icon" : "images/logo-marys.png",
+            "member-level" : 1
+        },
+        {
+            "name" : "Rock & Block",
+            "address" : "13288 Highway 8 Bus., El Cajon, CA 92021"  ,
+            "phone" : "619 937-3870" ,
+            "website" : "https://rockandblock.co/",
+            "icon" : "images/logo-rock-and-block.png",
+            "member-level" : 1
+        },
+        {
+            "name" : "Hilleker's Ranch Fresh Eggs, Inc.",
+            "address" : "11329 El Nopal, Lakeside, CA 92040"  ,
+            "phone" : "619 448-3683" ,
+            "website" : "https://hillikereggs.com/",
+            "icon" : "images/logo-hillikers.png",
+            "member-level" : 1
+        },
+        {
+            "name" : "Cafe 67",
+            "address" : "12381 Mapleview St, Lakeside, CA 92040"  ,
+            "phone" : "619 443-4100" ,
+            "website" : "https://www.cafe67usa.com/",
+            "icon" : "images/logo-cafe67.png",
+            "member-level" : 1
+        },
+        {
+            "name" : "Sunshine Ranch Therapeutic Riding",
+            "address" : "Lakeside, CA 92040"  ,
+            "phone" : "619 204-2637" ,
+            "website" : "https://sunshineranchriding.org/",
+            "icon" : "images/logo-sunshine-ranch.png",
+            "member-level" : 4
+        },
+        {
+            "name" : "Willowbrook Golf Course and Grill",
+            "address" : "11905 Riverside Dr, Lakeside, CA 92040"  ,
+            "phone" : "619 561-1061" ,
+            "website" : "http://www.willowbrookgolfcourse.com/",
+            "icon" : "images/logo-willowbrook-golf.png",
+            "member-level" : 2
+        },
+        {
+            "name" : "Alberson's",
+            "address" : "9560 Winter Garden Blvd, Lakeside, CA 92040"  ,
+            "phone" : "619 561-5521" ,
+            "website" : "https://local.albertsons.com/ca/lakeside/9560-winter-gardens-blvd.html",
+            "icon" : "images/logo-albertsons.png",
+            "member-level" : 3
+        },
+        {
+            "name" : "Grocery Outlet",
+            "address" : "9720 Winter Garden Blvd"  ,
+            "phone" : "619 353-0261" ,
+            "website" : "https://www.groceryoutlet.com/",
+            "icon" : "images/logo-grocery-outlet.png",
+            "member-level" : 3
+        },
+        {
+            "name" : "East County Style",
+            "address" : "9124 Hillman Way, Lakeside, CA 92040"  ,
+            "phone" : "619 721-3282" ,
+            "website" : "https://www.eastcountystyle.com/",
+            "icon" : "images/logo-east-county-style.png",
+            "member-level" : 2
+        }
+    ]
+}

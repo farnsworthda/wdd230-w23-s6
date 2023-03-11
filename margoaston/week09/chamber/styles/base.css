@@ -1,0 +1,667 @@
+:root {
+    /*These are the colors*/
+    --color-primary: #EFEFEF;
+    --color-secondary: #f7f7f7;
+    --color-accent1: #7d7c7a;
+    --color-accent2: #c9c19f;
+    --color-accent3: #d3cdb2;
+    --color-accent4: #3a508e;
+    --color-zebra: hsl(0, 0%, 93%, 1);
+
+    --color-paragraph-background: #d3cdb2;
+    --color-nav-link: #000000;
+    --color-nav-background: #cec7a8;
+    --color-nav-hover-link: #3a508a;
+    --color-nav-hover-background: #efefef;
+  
+    /*These are the fonts*/
+    --font-heading: Raleway, Verdana, sans-serif;
+    --font-subheading: Raleway, Verdana, sans-serif;
+    --font-subheading2: Raleway, Verdana, sans-serif;
+    --font-paragraph: Raleway, Verdana, sans-serif;
+}
+
+*{ 
+    /*apply a natural box layout model to all elements*/
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/dots.png");
+}
+
+header {
+    background-color: var(--color-paragraph-background);
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 1fr;
+    position: sticky;
+    top: 0;
+    width: 100%; 
+    max-height: 99.73px;
+    z-index: 10;
+}
+
+header a {
+    grid-row: 2/4;
+}
+
+ /*This is the logo*/
+#logo {
+    width: 5rem;
+    transition: width 0.4s;
+}
+
+a:hover {
+    opacity: .8;
+    transform: scale(1.1);
+}
+
+h1 {
+    grid-column: 2/4;
+    grid-row: 2;
+    font-family: var(--font-heading);
+    text-shadow: 1px 1px var(--color-paragraph-background), 2px 2px #6f736f;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: font-size 2s;
+    margin: 0;
+    padding-left: .5rem;
+    padding-top: .5vh;
+}
+
+header p {
+    grid-column: 2;
+    grid-row: 3;
+    font-family: var(--font-paragraph);
+    padding-left: .5rem;
+    /*z-index: 10;*/
+    font-size: .75rem;   
+}
+
+h2 {
+    font-family: var(--font-subheading2);
+    font-weight: 300;
+}
+  
+h3 {
+    font-family: var(--font-subheading2);
+    text-align: center;
+    font-weight: 200;
+    margin: .5em;
+}
+  
+h4 {
+    font-family:var(--font-subheading2);
+    font-weight: 700;
+    margin: .5em;
+    font-size: 1rem;
+    color: var(--accent4-color);
+}
+
+p {
+    font-family: var(--font-paragraph);
+}
+
+/*This is the style for the hamburger button*/
+#container {
+    display: inline-block;
+    max-height: 35px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: #000000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 10px) rotate(-45deg);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    transform: translate(0, -8px) rotate(45deg);
+}
+
+nav #container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*This is the navigation style*/
+nav {
+    grid-column: 4;
+    grid-row: 3/6;
+    text-align:center; 
+    font-family: var(--font-subheading2);
+    font-weight: 100;
+    margin-right: 1vw;
+    margin-left: 3px;
+    min-width: 80px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index:25;
+    font-size: small;
+    display: none;
+    background-color: var(--color-accent2); 
+}
+
+nav a {
+    display: block;
+    padding: .8rem 2vw;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    border-top: 1px solid rgba(0,0,0,0.5);
+    background-color: var(--color-nav-background);
+    font-family: var(--font-subheading2);
+    font-weight: 100;  
+}
+
+span img {
+    max-height: 20px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+nav ul li a:hover {
+    
+    color: var(--color-nav-hover-link);
+    background-color: var(--color-nav-hover-background);
+    text-decoration: underline;
+    transform: none;
+    cursor: pointer;
+}
+
+.active{
+    text-decoration: underline;
+    background-color: var(--color-primary);
+
+}
+
+
+ul:hover {
+    cursor: pointer;
+}
+
+nav ul.open {
+    display: block;
+}
+
+
+#today-is {
+    grid-column: 1/5;
+    grid-row: 4;
+    text-align: center;
+    background-color: var(--color-accent2);
+    padding: .9vh 0;
+    width: 100%;
+    font-family: var(--font-paragraph);
+    z-index: -1;
+    margin-top: 2vh;
+}
+
+/*This is the main style*/
+main {
+    margin-top: -1rem;
+    margin-bottom: -7rem;
+}
+hr {
+    height: 3px;
+    margin: 15px 0;
+    background: var(--color-accent4);
+}
+
+
+
+main.main1 section p {
+    padding-top: 1vh;
+}
+
+main.main1 section:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: .6rem;
+}
+
+#hero {
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 0;
+    margin: -2px;
+}
+
+#hero img {
+    width: 100%;
+    grid-column: 1/4;
+}
+
+section {
+    background-color: var(--color-primary);
+    margin: 2vw;
+    padding: 4vw;
+    text-align: center;
+}
+
+section div {
+    padding:2vw;
+    height: auto;
+}
+
+.spotlight div, .discover-container {
+    margin: 1vh;
+    background-color: var(--color-secondary); 
+}
+
+.spotlight div {
+    border-radius: 15px;
+}
+
+.spotlight div:nth-child(3) {
+    display: none;
+}
+
+#join {
+    display: none;
+}
+
+
+/*This is the footer style*/
+footer {
+    background-color: var(--color-paragraph-background);
+    position: relative;
+    top: 8rem;
+    padding: 1rem 0;
+    font-family: var(--font-paragraph);
+    
+}
+
+footer img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+footer#update-data {
+    grid-column: 3;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;  
+}
+
+footer a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#weather-credit {
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+/*--------------style for the discover page----------------*/
+
+picture img[data-src]{
+    filter:blur(0.5em);  
+}
+
+picture img{
+    filter: blur(0em);
+    transition: filter 1.2s;
+    border: solid var(--color-primary);
+    transition: border .5s;
+}
+
+#discover-img img {
+    object-fit: cover;
+    width: 70%;
+    height: auto;
+}
+
+main#discover-main {
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+      
+}
+
+#around-town {
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    margin-top: 2.5vh;
+}
+
+#around-town h2 {
+    padding: 3vh 0;
+    font-size: 2rem;
+}
+
+#around-town p {
+    padding-bottom: 2rem;
+    max-width: 80%;
+    align-self: center;
+}
+.discover-container {
+    background-color: var(--color-primary);
+    max-height: none;
+    padding: 1vh;
+    margin-top: 2.5vh;
+}
+.discover-container div{
+    background-color: var(--color-secondary);
+    border-radius: 15px; 
+}
+
+.label {
+    font-weight: 500;
+    color: var(--color-accent4);
+}
+
+
+.label span {
+    font-weight: 200;
+    color: black;
+}
+
+/*------------Style for the join page------------------*/
+main#join-main {
+    display: block;
+    font-family: var(--font-paragraph);  
+    margin-top: 1rem; 
+    justify-content: center;
+    text-align: center;
+}
+
+.page-title {
+    text-align: center;
+}
+
+#join-main h2 {
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+/* FORM */
+form {
+    margin: 0 2vw;
+}
+form h2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+form fieldset {
+    min-width: 350px;
+    margin: 2rem auto;
+    border: 1px solid var(--color-accent4);
+    border-radius: 10px;
+    padding: .5rem 2%;
+    max-width: 40rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--color-secondary);
+}
+
+form legend {
+    color: var(--color-accent4);
+    margin: 0 1rem;
+    padding: 0 .5rem;
+    max-width: 20rem;
+    font-size: 1.2rem;
+}
+
+form label.top, form div {
+    display:block;
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+
+form label.top input, form label.top textarea {
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    color: var(--color-accent1);
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    
+}
+
+form input.submitBtn {
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: 1rem;
+    width: 75%;
+    max-width: 340px; 
+    padding: .75rem 1.5rem;
+}
+
+form label.top input:required {
+    border-left: #9c2c13 solid 6px;
+}
+form label.top input:required:valid {
+    border-left: var(--color-accent4) solid 6px;
+}
+
+form div {
+    max-width: 40rem;
+    margin: 2rem auto;
+}
+
+/*Table*/
+
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+    font-size: x-small;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    margin: 50px auto;
+    padding: 10px 10px;
+}
+
+
+th:first-child {
+    background-color: var(--color-accent1);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-accent4);
+    
+}
+th {
+    background-color: var(--color-accent2);
+    font-family: var(--font-paragraph);
+    font-weight: 200;
+    border: 1px solid var(--color-accent4);
+    font-size: small;
+    padding: 10px;
+}
+
+th:first-child {
+    background-color: var(--color-accent4);
+    font-size: large;
+}
+
+
+td {
+    border: 1px solid var(--color-accent4); 
+    text-align: center; 
+    padding:5px 10px; 
+    font-size: small;
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-zebra);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--color-secondary);
+}
+
+/*------------Style for the thank you page------------------*/
+
+
+#thanks-main {
+    position: relative;
+    margin-top: 13vh;
+}
+
+#thanks-main div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#thanks-main h2 {
+    color: var(--color-accent4);
+    font-family: var(--font-heading);
+    text-shadow: 1px 1px var(--color-nav-hover-background) , 2px 2px #6f736f;
+    font-size: 8.5vw;
+    font-weight: 300;
+    transition: font-size 2s;
+}
+
+#thanks-footer {
+    position: fixed;
+    top: 70vh;
+    width: 100%;
+    height: 30%;
+}
+
+/*------------Style for the Directory page------------------*/
+
+#directory-main {
+    margin: 1rem 2rem -7rem; 
+    text-align: center;
+}
+
+.sub-heading {
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.display-btn {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid-btn, #list-btn {
+    cursor: pointer;
+    transform: scale(1.1);
+    margin: 1rem;
+}
+
+.grid {
+    border-radius: 9px;
+    box-shadow: #888888 0 0 30px 10px;
+    background-color: var(--color-accent4);
+    margin: 2rem;
+    padding: .5rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#directory-main section {
+    padding: 1rem;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+    padding: 0px;
+}
+
+.list .name .icon{
+    display: none;
+}
+
+.list .name {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 2rem;
+}
+
+.list section {
+    text-align: left;
+}
+
+.grid section {
+    box-shadow: black 5px 5px ;
+    border: black solid 2px;
+}
+
+#directory-main img {
+    margin: .5rem;
+}
+
+#directory-main  {
+    overflow-wrap: break-word;
+}
+
+#directory-main p {
+    margin-bottom: .2rem;
+    font-weight: 300;
+}
+
+#directory-main section h2 {
+    font-weight: 400;
+}
+
+button {
+    border: black solid 1.5px;
+    height: 40px;
+    width: 50px;
+    font-size: 20px;
+    background-color: var(--color-accent3);
+    line-height: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    
+}
+
+#list-btn {
+    line-height: 6px;
+    
+}
+#grid-btn {
+    font-size: 15px;
+    line-height: 6px;
+    
+}
